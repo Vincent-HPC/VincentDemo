@@ -83,8 +83,14 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="panel">
-                            @component('components.who')
-                            @endcomponent
+                            <!-- @component('components.who')
+                            @endcomponent -->
+                            <ul>
+                                <li><a href="/index" target="_blank" rel="noopener noreferrer">首頁</a></li>
+                                <li><a href="/calendar" target="_blank" rel="noopener noreferrer">健身日曆</a></li>
+                                <li><a href="/workout_menu" target="_blank" rel="noopener noreferrer">健身菜單</a></li>
+                                <li><a href="/video" target="_blank" rel="noopener noreferrer">影片集</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

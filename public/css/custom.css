@@ -1,0 +1,30 @@
+/* calendar */
+#calendar {
+    margin: 0 auto;
+    width: 90%;
+}
+
+#cal_header {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.day,
+.date-block {
+    float: left;
+    width: calc(100% / 7);
+}
+
+#dates {
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.date-block {
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    /* view height */
+    height: 15vh;
+    padding: 4px;
+
+}

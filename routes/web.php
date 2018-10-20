@@ -15,6 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Test!
+// ---------------------------
+Route::get('/index', function () {
+    return view('test_layouts.index');
+});
+Route::get('/calendar', function () {
+    return view('test_layouts.calendar');
+});
+Route::get('/workout_menu', function () {
+    return view('test_layouts.workout_menu');
+});
+Route::get('/video', function () {
+    return view('test_layouts.video');
+});
+
+// -----------------------------
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -31,5 +48,7 @@ Route::group(['prefix' => 'admin'], function(){
     Route::get('/password/reset/{token}', 'AuthAdmin\ResetPasswordController@showResetForm')->name('admin.password.reset');
     Route::post('/password/reset', 'AuthAdmin\ResetPasswordController@reset');
 
+    
+    Route::get('/test', 'TestController@index')->name('test.home');
 });
 
