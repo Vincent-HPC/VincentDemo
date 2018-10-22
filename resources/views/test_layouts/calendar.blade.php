@@ -17,17 +17,62 @@
 		</div>
 
 		<div id="dates" class="clearfix">
-			<?php for($i = 0; $i < 28; $i++): ?>
-			<div class="date-block">
-				<div class="date">
-					1
-				</div>
-				<div class="events">
+			@for($i = 1; $i <= 28; $i++)
+				<div class="date-block">
+					<div class="date">
+							{{ $i }}
+					</div>
+					<div class="events">
 
+					</div>
 				</div>
-			</div>
-			<?php endfor ?>
+			@endfor
 		</div>
+
 	</div>
 
+
+	<div id="info-panel" class="new">
+		<div class="close">x</div>
+
+		<form>
+			<div class="title">
+				<label>event</label><br>
+				<input type="text" name="title" >
+			</div>
+			<div class="error-msg">
+				<div class="alert alert-danger">
+					error
+				</div>
+			</div>
+			<div class="time-picker">
+				<div class="selected-date">
+					<span>month</span><span>date</span>
+
+				</div>
+				<div class="from">
+						<label for="from">from</label>
+						<input id="from" type="time" name="start_time">
+				</div>
+				<div class="to">
+						<label for="to">to</label>
+						<input id="to" type="time" name="end_time">
+				</div>
+			</div>
+			<div class="description">
+				<label>description</label><br>
+				<textarea name="description" id="description" ></textarea>
+			</div>
+		</form>
+
+		<div class="buttons clearfix">
+			<button class="create">create</button>
+			<button class="update">update</button>
+			<button class="cancel">cancel</button>
+			<button class="delete">delete</button>
+		</div>
+
+	</div>
+
+	
 @endsection
