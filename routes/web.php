@@ -24,11 +24,18 @@ Route::get('/calendar', function () {
     return view('test_layouts.calendar');
 });
 Route::get('/workout_menu', function () {
-    return view('test_layouts.workout_menu');
+    return view('WorkoutMenu.workout_menu');
 });
 Route::get('/video', function () {
     return view('test_layouts.video');
 });
+
+// -----------------------------
+
+
+// Blog!
+// -----------------------------
+
 
 // -----------------------------
 
@@ -37,7 +44,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/user/logout', 'Auth\LoginController@userLogout')->name('user.logout');
 
-
+// Multi-Login part.
 Route::group(['prefix' => 'admin'], function(){ 
     Route::get('/login', 'AuthAdmin\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'AuthAdmin\LoginController@login')->name('admin.login.submit');

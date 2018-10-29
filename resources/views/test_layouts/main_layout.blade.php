@@ -42,9 +42,6 @@
                         <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/calendar">Calendar</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/workout_menu">WorkOut Menu</a>
                     </li>
                     <li class="nav-item">
@@ -115,7 +112,8 @@
     </div>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/calendar.js') }}"></script>
+    <!-- <script src="{{ asset('js/calendar.js') }}"></script> -->
+    @yield('custom_js')
 </body>
 
 </html>
